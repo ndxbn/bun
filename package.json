@@ -1,0 +1,17 @@
+{
+  "name": "bun",
+  "module": "index.ts",
+  "type": "module",
+  "bin": "cli.ts",
+  "scripts": {
+    "start": "echo end of bun create command"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@tsconfig/bun": "^1.0.7",
+    "@tsconfig/strictest": "^2.0.5"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
