@@ -1,4 +1,5 @@
 {
+	"private": true,
 	"name": "bun",
 	"module": "index.ts",
 	"type": "module",
