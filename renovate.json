@@ -1,12 +1,3 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:best-practices",
-    ":disableDependencyDashboard",
-    ":semanticCommits",
-    ":maintainLockFilesWeekly",
-    ":automergeMinor",
-    ":automergeTypes",
-    ":automergeRequireAllStatusChecks"
-  ]
+  "extends": ["github>ndxbn/renovate-config"]
 }
