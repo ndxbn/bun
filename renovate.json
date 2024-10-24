@@ -3,7 +3,7 @@
   "extends": [
     "config:best-practices",
     ":disableDependencyDashboard",
-    ":semanticCommit",
+    ":semanticCommits",
     ":maintainLockFilesWeekly",
     ":automergeMinor",
     ":automergeTypes",
