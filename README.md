@@ -1,4 +1,5 @@
 # XXX
+
 This project is created by `bun create ndxbn/bun`.
 
 - TypeScript config is based on "strictest"
@@ -6,7 +7,7 @@ This project is created by `bun create ndxbn/bun`.
 - entrypoint files
   - `bun run cli` (or `bunx THIS_PACKAGE`): [cli.ts](./cli.ts)
   - `bun run start` or `docker-compose up`: [server.ts](./server.ts)
-  - `import from "THIS_REPO"`: [index.ts](./index.ts) 
+  - `import from "THIS_REPO"`: [index.ts](./index.ts)
 
 ## Install & Run
 
