@@ -1,18 +1,22 @@
 {
-	"private": true,
-	"name": "bun",
-	"module": "index.ts",
-	"type": "module",
-	"bin": "cli.ts",
-	"scripts": {
-		"dev": "Hello via package.scripts.dev"
-	},
-	"devDependencies": {
-		"@types/bun": "latest",
-		"@tsconfig/bun": "1.0.7",
-		"@tsconfig/strictest": "2.0.5"
-	},
-	"peerDependencies": {
-		"typescript": "^5.0.0"
-	}
+  "private": true,
+  "name": "bun",
+  "module": "index.ts",
+  "type": "module",
+  "bin": "cli.ts",
+  "scripts": {
+    "dev": "Hello via package.scripts.dev",
+    "fmt": "prettier -u -w **/*"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@tsconfig/bun": "1.0.7",
+    "@tsconfig/strictest": "2.0.5"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "prettier": "^3.3.3"
+  }
 }
