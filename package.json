@@ -1,22 +1,21 @@
 {
-  "private": true,
-  "name": "bun",
-  "module": "index.ts",
-  "type": "module",
-  "bin": "cli.ts",
-  "scripts": {
-    "dev": "Hello via package.scripts.dev",
-    "fmt": "prettier -u -w **/*"
-  },
-  "devDependencies": {
-    "@types/bun": "latest",
-    "@tsconfig/bun": "1.0.7",
-    "@tsconfig/strictest": "2.0.5"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "dependencies": {
-    "prettier": "^3.3.3"
-  }
+	"name": "bun",
+	"module": "index.ts",
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@tsconfig/bun": "1.0.7",
+		"@tsconfig/strictest": "2.0.5",
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"scripts": {
+		"cli": "bun cli.ts",
+		"start": "bun server.ts",
+		"check": "biome check --write --unsafe"
+	},
+	"bin": "cli.ts",
+	"private": true,
+	"type": "module"
 }
