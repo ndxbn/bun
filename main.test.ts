@@ -1,7 +1,6 @@
+import { expect, test } from "bun:test";
 import { main } from "./";
 
-describe("main test", () => {
-	it("should return string", () => {
-		expect(main()).toBeString();
-	});
+test("main test", () => {
+	expect(main()).toBeString();
 });

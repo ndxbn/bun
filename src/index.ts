@@ -1,3 +1,3 @@
-export function main(): void {
-  return "Hello via Bun!";
+export function main(): string {
+	return "Hello via Bun!";
 }
