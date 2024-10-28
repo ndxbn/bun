@@ -6,6 +6,6 @@ COPY server.ts cli.ts ./
 COPY src/ ./
 COPY package.json bun.lockb ./
 
-RUN bun install --frozen-lockfile
+RUN bun install --production --frozen-lockfile
 ENTRYPOINT ["bun"]
 CMD ["run", "start"]
