@@ -13,7 +13,8 @@
 	"scripts": {
 		"cli": "bun cli.ts",
 		"start": "bun server.ts",
-		"check": "biome check --write --unsafe"
+		"fmt": "biome check --write --unsafe",
+		"docker:action-lint": "docker run --rm -v $(pwd):/repo --workdir /repo rhysd/actionlint:latest -color"
 	},
 	"bin": "cli.ts",
 	"private": true,
