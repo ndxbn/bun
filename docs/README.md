@@ -21,8 +21,8 @@ class ApplicationInterface {
   <<interface>>
 }
 %% entrypoint --> each application class
-cli.ts_file --> ConsoleApplication: use
-server.ts_file --> HttpApplication: use
+cli-ts_file --> ConsoleApplication: use
+serve-ts_file --> HttpApplication: use
 import_as_module --> Application: import
 
 %% Application classes extends/implements
