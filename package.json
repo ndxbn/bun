@@ -17,5 +17,8 @@
 	},
 	"bin": "cli.ts",
 	"private": true,
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"lefthook": "^1.8.1"
+	}
 }
