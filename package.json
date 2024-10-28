@@ -1,25 +1,19 @@
 {
+	"private": true,
 	"name": "bun",
-	"module": "index.ts",
+	"type": "module",
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
 		"@tsconfig/bun": "1.0.7",
 		"@tsconfig/strictest": "2.0.5",
-		"@types/bun": "latest"
+		"@types/bun": "latest",
+		"lefthook": "1.8.1"
 	},
 	"peerDependencies": {
-		"typescript": "^5.0.0"
+		"typescript": "5.0.0"
 	},
 	"scripts": {
-		"cli": "bun cli.ts",
-		"start": "bun server.ts",
 		"fmt": "biome check --write --unsafe",
 		"docker:action-lint": "docker run --rm -v $(pwd):/repo --workdir /repo rhysd/actionlint:latest -color"
-	},
-	"bin": "cli.ts",
-	"private": true,
-	"type": "module",
-	"dependencies": {
-		"lefthook": "^1.8.1"
 	}
 }
