@@ -1,4 +1,4 @@
-# XXX
+#
 
 This project is created by `bun create ndxbn/bun`.
 
@@ -6,7 +6,7 @@ This project is created by `bun create ndxbn/bun`.
 - Dockerfile for production, docker-compose for development
 - entrypoint files
   - `bun run cli` (or `bunx THIS_PACKAGE`): [cli.ts](./cli.ts)
-  - `bun run start` or `docker-compose up`: [server.ts](./server.ts)
+  - `bun run start` and/or `docker-compose up`: [server.ts](./server.ts)
   - `import from "THIS_REPO"`: [index.ts](./index.ts)
 
 ## Install & Run

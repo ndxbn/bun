@@ -1,3 +1,1 @@
-import { main } from "./src";
-
-main();
+console.log("Hello from server.ts");
