@@ -21,7 +21,7 @@ jobs:
       - run: bun install
       - run: bun lint:docs:ja
         # bun lint may be biome, so you may not need to run.
-      - run: biome ci .
+      - run: biome ci --reporter=github .
   dockerlint:
     runs-on: ubuntu-latest
     steps:
