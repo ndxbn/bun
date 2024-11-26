@@ -14,7 +14,7 @@
 		"lefthook": "1.8.4",
 		"textlint": "14.3.0",
 		"textlint-rule-preset-ja-technical-writing": "10.0.1",
-		"type-fest": "4.28.0"
+		"type-fest": "4.28.1"
 	},
 	"peerDependencies": {
 		"typescript": "5.7.2"
