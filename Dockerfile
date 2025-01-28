@@ -1,4 +1,4 @@
-FROM  oven/bun:alpine@sha256:ae1ee3f0e326ad8ae886bd500929e7f4fcb4986a1455d6d6ab2f3c2498036aad
+FROM  oven/bun:alpine@sha256:fc66d85880a740870ff384fc344379715a8d5ffa7acf1e8ac07e90b46eea07e7
 
 WORKDIR /home/bun/app
 COPY tsconfig.json ./
