@@ -4,7 +4,7 @@ WORKDIR /home/bun/app
 COPY tsconfig.json ./
 COPY src/ ./src/
 COPY scripts/ ./scripts/
-COPY package.json bun.lockb ./
+COPY package.json bun.lock ./
 
 ENV NODE_ENV=production
 RUN bun install
