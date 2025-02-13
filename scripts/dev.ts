@@ -53,6 +53,11 @@ if (countCommits <= 1) {
 		await Bun.file('.github/workflows/coverage.coveralls.yaml').delete();
 	}
 
+	// ensure ".env" file
+	if (!Bun.file('.env').exists()) {
+		await Bun.write('.env', Bun.file('.env.example'));
+	}
+
 	// make initial commit
 	await $`bun fmt`;
 	await $`git add .`;
