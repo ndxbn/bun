@@ -39,6 +39,7 @@ if (countCommits <= 1) {
 		throw new Error("cannot get cwd name");
 	}
 
+	// package.json placeholders
 	const newPackageJson: PackageJson = {};
 	// name
 	if (packageJson.name == null || packageJson.name === "<default>") {
@@ -52,6 +53,7 @@ if (countCommits <= 1) {
 		await Bun.file('.github/workflows/coverage.coveralls.yaml').delete();
 	}
 
+	// make initial commit
 	await $`bun fmt`;
 	await $`git add .`;
 	await $`git commit --amend -m "Initial commit (via bun create)"`.catch(
