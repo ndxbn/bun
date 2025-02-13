@@ -15,6 +15,7 @@ const { values } = parseArgs({
 			type: "boolean",
 		},
 	},
+	strict: false,
 });
 
 await Promise.all([
