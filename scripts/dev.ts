@@ -1,20 +1,20 @@
-import {$, type ShellError} from "bun";
-import {parseArgs} from "node:util";
-import type {PackageJson} from "type-fest";
-import packageJson from "../package.json" with {type: "json"};
+import { parseArgs } from "node:util";
+import { $, type ShellError } from "bun";
+import type { PackageJson } from "type-fest";
+import packageJson from "../package.json" with { type: "json" };
 
 if (process.env.NODE_ENV !== "development") {
 	console.error("NODE_ENV is not development.");
 	process.exit(1);
 }
 
-const {values} = parseArgs({
+const { values } = parseArgs({
 	args: Bun.argv,
 	options: {
 		coveralls: {
 			type: "boolean",
-		}
-	}
+		},
+	},
 });
 
 await Promise.all([
@@ -48,14 +48,14 @@ if (countCommits <= 1) {
 
 	// pick GitHub Actions CI
 	if (values.coveralls ?? false) {
-		await Bun.file('.github/workflows/coverage.yaml').delete();
+		await Bun.file(".github/workflows/coverage.yaml").delete();
 	} else {
-		await Bun.file('.github/workflows/coverage.coveralls.yaml').delete();
+		await Bun.file(".github/workflows/coverage.coveralls.yaml").delete();
 	}
 
 	// ensure ".env" file
-	if (!Bun.file('.env').exists()) {
-		await Bun.write('.env', Bun.file('.env.example'));
+	if (!Bun.file(".env").exists()) {
+		await Bun.write(".env", Bun.file(".env.example"));
 	}
 
 	// make initial commit
@@ -70,7 +70,6 @@ if (countCommits <= 1) {
 			throw reason;
 		},
 	);
-
 }
 
 console.log("To get started developing: edit src/server.ts and `bun start`");
