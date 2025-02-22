@@ -11,7 +11,7 @@
 		"@tsconfig/bun": "1.0.7",
 		"@tsconfig/strictest": "2.0.5",
 		"@types/bun": "latest",
-		"lefthook": "1.10.10",
+		"lefthook": "1.10.11",
 		"textlint": "14.4.2",
 		"textlint-rule-preset-ja-technical-writing": "12.0.2",
 		"type-fest": "4.35.0"
