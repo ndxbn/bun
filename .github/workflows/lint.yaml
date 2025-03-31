@@ -16,7 +16,7 @@ jobs:
       - name: Setup Bun
         uses: oven-sh/setup-bun@4bc047ad259df6fc24a6c9b0f9a0cb08cf17fbe5 # v2
       - name: Setup Biome
-        uses: biomejs/setup-biome@fcb95f3805d3a2fac0ca09635a90a9ac2b38188e # v2
+        uses: biomejs/setup-biome@f382a98e582959e6aaac8e5f8b17b31749018780 # v2
       # lint
       - run: bun install
       - run: bun lint:docs:ja
@@ -30,7 +30,7 @@ jobs:
       - name: Setup Bun
         uses: oven-sh/setup-bun@4bc047ad259df6fc24a6c9b0f9a0cb08cf17fbe5 # v2
       - name: Setup Biome
-        uses: biomejs/setup-biome@fcb95f3805d3a2fac0ca09635a90a9ac2b38188e # v2
+        uses: biomejs/setup-biome@f382a98e582959e6aaac8e5f8b17b31749018780 # v2
       - run: bunx dockerlint Dockerfile
   hadolint:
     runs-on: ubuntu-latest
