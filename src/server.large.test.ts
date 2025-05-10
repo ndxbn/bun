@@ -1,5 +1,5 @@
-import {default as app} from './server';
-import {expect, test} from "bun:test";
+import { expect, test } from "bun:test";
+import { default as app } from "./server";
 
 test("server test", async () => {
 	const server = Bun.serve(app);
