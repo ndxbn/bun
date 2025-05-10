@@ -11,8 +11,7 @@ services:
       - redis
       - postgres
       - minio
-    # todo: bun start で HTTP Server プロセスが上がるようになったら、restart: unless-stopped にする
-    # restart: unless-stopped
+    restart: unless-stopped
 
   redis:
     image: redis:alpine
