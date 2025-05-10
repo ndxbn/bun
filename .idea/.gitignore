@@ -1,0 +1,6 @@
+*
+!.gitignore
+!bun.iml
+!misc.xml
+!modules.xml
+!vcs.xml
