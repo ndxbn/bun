@@ -1,0 +1,11 @@
+.DS_Store
+*.log
+*.tmp
+
+.env
+.env.*
+!.env.test
+
+dist/
+build/
+out/
