@@ -13,5 +13,6 @@ test("main test", async () => {
 });
 
 test("env", () => {
+	expect(process.env.NODE_ENV).toBe("ci");
 	expect(process.env.REDIS_URL).toBe("redis://redis:6379");
 });
