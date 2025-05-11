@@ -2,5 +2,10 @@
 	"extends": [
 		"@tsconfig/bun/tsconfig.json",
 		"@tsconfig/strictest/tsconfig.json"
-	]
+	],
+	"compilerOptions": {
+		"paths": {
+			"@/*": ["./app/*"]
+		}
+	}
 }

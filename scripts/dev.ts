@@ -1,6 +1,6 @@
 import { parseArgs } from "node:util";
+import type { PackageJSON } from "@npm/types";
 import { $, type ShellError } from "bun";
-import type { PackageJson } from "type-fest";
 import packageJson from "../package.json" with { type: "json" };
 
 if (process.env.NODE_ENV !== "development") {
@@ -41,7 +41,7 @@ if (countCommits <= 1) {
 	}
 
 	// package.json placeholders
-	const newPackageJson: PackageJson = {};
+	const newPackageJson: PackageJSON = {};
 	// name
 	if (packageJson.name == null || packageJson.name === "<default>") {
 		newPackageJson.name = repoName;
