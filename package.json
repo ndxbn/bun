@@ -1,7 +1,7 @@
 {
 	"private": true,
 	"name": "my-cool-app",
-	"description": "超アメイジングアプリケーション★",
+	"description": "超アメイジングハイパーアプリケーション★",
 	"version": "0.0.0",
 	"type": "module",
 	"main": "index.js",
