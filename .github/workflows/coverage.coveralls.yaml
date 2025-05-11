@@ -7,7 +7,7 @@ on:
   pull_request:
 
 jobs:
-  bun-test:
+  coveralls:
     runs-on: ubuntu-latest
     env:
       NODE_ENV: test
