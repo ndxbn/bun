@@ -39,7 +39,7 @@ const { values } = parseArgs({
 		"dry-run": {
 			type: "boolean",
 			short: "n",
-		}
+		},
 	},
 	strict: false,
 });
@@ -70,7 +70,7 @@ if (values.verbose) {
 	console.log(values.verbose);
 }
 
-if(values["dry-run"]) {
+if (values["dry-run"]) {
 	// todo: app の出力を含むコンテナのうち、Logger 以外のすべてをモックにする
 	console.log("dry-run");
 }
