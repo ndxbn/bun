@@ -1,4 +1,4 @@
-name: Bun test
+name: Coveralls
 
 on:
   push:
@@ -7,13 +7,26 @@ on:
   pull_request:
 
 jobs:
-  bun-test:
+  coveralls:
     runs-on: ubuntu-latest
     env:
       NODE_ENV: test
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       - uses: oven-sh/setup-bun@735343b667d3e6f658f44d0eca948eb6282f2b76 # v2
+      - run: docker compose up minio -d
+      - run: timeout 60s bash -c 'until curl -s http://localhost:9000/minio/health/ready; do sleep 1; done'
+      - name: Create bucket
+        run: |
+          aws --endpoint-url http://localhost:9000 \
+              --no-verify-ssl \
+              s3 mb s3://my-first-bucket \
+              --region us-east-1
+        env:
+          AWS_ACCESS_KEY_ID: minioadmin
+          AWS_SECRET_ACCESS_KEY: minioadminpw
+          AWS_EC2_METADATA_DISABLED: true
+      # install and test
       - run: bun install
       - run: bun test
       - name: Coveralls
