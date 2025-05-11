@@ -7,10 +7,15 @@ const app = new ConsoleApplication();
 
 const HELP_MESSAGE = `NAME
 	${packageJson.name} - ${packageJson.description}
+SYNOPSIS
+	bun cli [OPTIONS]
 OPTIONS:
-	-v, --version  Show version number
-	-h, --help     Show help
-	-V, --verbose  Show verbose output. -VV for more verbose, -VVV for even more verbose.
+	General options
+		-n, --dry-run  Print the commands that would be executed, but do not execute them (except in certain circumstances).
+	Getting Help
+		-V, --version  Show version number.
+		-h, --help     Show help (this message).
+		-v, --verbose  Show verbose output. -VV for more verbose, -VVV for even more verbose.
 `;
 
 const { values } = parseArgs({
@@ -31,6 +36,10 @@ const { values } = parseArgs({
 			short: "V",
 			multiple: true,
 		},
+		"dry-run": {
+			type: "boolean",
+			short: "n",
+		}
 	},
 	strict: false,
 });
@@ -57,5 +66,11 @@ if (values.help) {
 // 以下、通常の処理
 if (values.verbose) {
 	// todo: app.logger.loglevel で制御するようにする。
+	// values.verbose は [true, true] みたいに個数分の True が入る。
 	console.log(values.verbose);
+}
+
+if(values["dry-run"]) {
+	// todo: app の出力を含むコンテナのうち、Logger 以外のすべてをモックにする
+	console.log("dry-run");
 }
