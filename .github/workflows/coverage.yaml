@@ -35,7 +35,7 @@ jobs:
         ports:
           - 9000:9000
         options: >-
-          server /data --console-address ":9001"
+          minio/minio server /data --console-address ":9001"
           --health-cmd "curl -f http://localhost:9000/minio/health/ready"
           --health-interval 10s
           --health-timeout 5s
