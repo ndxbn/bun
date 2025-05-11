@@ -1,4 +1,4 @@
-name: Bun test
+name: Coveralls
 
 on:
   push:
