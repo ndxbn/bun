@@ -15,11 +15,13 @@ This project is created by `bun create ndxbn/bun`.
 ## Requirements
 
 - [Bun](https://bun.sh/)
-- [Docker](https://docker.com/) (OPTIONAL)
+- [Docker](https://docker.com/) or [podman](https://podman.io/)
 
 ## Install, Run
 
 ```bash
+# start middlewares
+docker compose up -d
 # install modules
 bun install
 # prepare development environment
@@ -34,7 +36,7 @@ bun start
 bun test
 ```
 
-## use Docker for Optional Somethings
+## What to use Docker
 
 - startup Middlewares
 - [lint GitHub Action](./.github/lint.compose.yaml): do `cd .github` before run it
