@@ -15,7 +15,7 @@ services:
     # restart: unless-stopped
 
   redis:
-    image: redis:alpine
+    image: redis:alpine@sha256:0779069b3c24a47a2f681855c1c01d046793e7c5f7d2b079c2aa0652c42eaf0e
     ports:
       - "6379:6379"
     volumes:
@@ -23,7 +23,7 @@ services:
     restart: unless-stopped
 
   postgres:
-    image: postgres:alpine
+    image: postgres:alpine@sha256:f325a29ec9deb7039c5f07761d77d79d537dac836ecd99f982f6ca5476724604
     ports:
       - "5432:5432"
     environment:
@@ -35,7 +35,7 @@ services:
     restart: unless-stopped
 
   minio:
-    image: minio/minio
+    image: minio/minio@sha256:a1ea29fa28355559ef137d71fc570e508a214ec84ff8083e39bc5428980b015e
     ports:
       - "9000:9000"
       - "9001:9001"
