@@ -10,12 +10,8 @@ jobs:
   create-bucket:
     runs-on: ubuntu-latest
     steps:
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: minioadmin
-          aws-secret-access-key: minioadminpw
-          aws-region: ap-northeast-1
+      - run: aws configure set access_key minioadmin
+      - run: aws configure set secret_key minioadminpw
       - run: aws s3 mb s3://my-first-bucket --endpoint http://localhost:9000
   bun-test:
     runs-on: ubuntu-latest
