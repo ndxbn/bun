@@ -4,7 +4,7 @@ node_modules/
 .env
 .env.*
 !.env.example
-!.env.ci
+!.env.test
 
 index.js
 cli.js
