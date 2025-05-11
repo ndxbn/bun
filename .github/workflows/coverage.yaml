@@ -14,7 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       - uses: oven-sh/setup-bun@735343b667d3e6f658f44d0eca948eb6282f2b76 # v2
-      - run: curl -f http://localhost:9000/minio/health/ready
+      - run: timeout 60s bash -c 'until curl -s http://localhost:9000/minio/health/ready; do sleep 1; done'
+
       - name: Create bucket
         run: |
           aws --endpoint-url http://localhost:9000 \
