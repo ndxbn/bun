@@ -12,6 +12,7 @@ test("server test", async () => {
 	// ミドルウェアへの疎通
 	const responseBody = await fetchResponse.json();
 	expect(responseBody.Redis).toBe("OK");
+	expect(responseBody.S3).toBe("OK");
 
 	// teardown
 	await server.stop();
