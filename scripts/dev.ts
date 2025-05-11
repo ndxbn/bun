@@ -1,6 +1,6 @@
 import { parseArgs } from "node:util";
-import { $, type ShellError } from "bun";
 import type { PackageJSON } from "@npm/types";
+import { $, type ShellError } from "bun";
 import packageJson from "../package.json" with { type: "json" };
 
 if (process.env.NODE_ENV !== "development") {
