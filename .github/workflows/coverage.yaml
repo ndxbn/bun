@@ -8,10 +8,15 @@ on:
 
 jobs:
   create-bucket:
-    runs-on: minio/mc
+    runs-on: ubuntu-latest
     steps:
-      - run: mc alias set my_minio http://localhost:9000 minioadmin minioadminpw;
-      - run: mc mb --ignore-existing my_minio/my-first-bucket
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: minioadmin
+          aws-secret-access-key: minioadminpw
+          aws-region: ap-northeast-1
+      - run: aws s3 mb s3://my-first-bucket --endpoint http://localhost:9000
   bun-test:
     runs-on: ubuntu-latest
     needs:
