@@ -1,5 +1,5 @@
-import {RedisClient} from "bun";
-import type {Serve} from "bun";
+import { RedisClient } from "bun";
+import type { Serve } from "bun";
 
 // Clients
 const redis = new RedisClient();
@@ -25,5 +25,4 @@ export default {
 
 		return response;
 	},
-
 } satisfies Serve;
