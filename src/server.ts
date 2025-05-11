@@ -1,4 +1,4 @@
-import { RedisClient, S3Client} from "bun";
+import { RedisClient, S3Client } from "bun";
 import type { Serve } from "bun";
 
 // Clients
