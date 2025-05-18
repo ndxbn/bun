@@ -17,7 +17,7 @@ This project is created by `bun create ndxbn/bun`.
 - [Bun](https://bun.sh/)
 - [Docker](https://docker.com/) or [podman](https://podman.io/)
 
-## Install, Run
+## Getting Start
 
 ```bash
 # start middlewares
