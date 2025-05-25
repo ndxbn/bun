@@ -21,6 +21,7 @@
 		"typescript": "5.8.3"
 	},
 	"scripts": {
+		"postcreate": "bun scripts/postcreate.ts",
 		"dev": "bun scripts/dev.ts",
 		"start": "bun src/server.ts",
 		"cli": "bun src/cli.ts",
