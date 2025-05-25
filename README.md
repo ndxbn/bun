@@ -1,3 +1,7 @@
+<!--
+README は `bun create ndxbn/bun` で生成されたプロジェクトに新しくジョインしてきた開発者のために書きます。
+`bun create ndxbn/bun` 自体の開発者のためのものではありません。
+-->
 #
 [![Bun](https://img.shields.io/badge/Bun-000000?logo=bun&logoColor=white&labelColor=grey)](https://bun.sh/)
 [![Formatted and Linted with Biome](https://img.shields.io/badge/Biome-60a5fa?logo=biome&labelColor=grey)](https://biomejs.dev/)
@@ -7,7 +11,7 @@ This project is created by `bun create ndxbn/bun`.
 
 - TypeScript config is based on "strictest"
 - Dockerfile for production, docker-compose for development
-- entrypoint files
+- Entrypoint files
   - [index.ts](./src/index.ts): `import from "THIS_REPO"` from outside
   - [cli.ts](src/cli.ts): `bun cli`
   - [server.ts](src/server.ts): `bun start`
@@ -20,13 +24,18 @@ This project is created by `bun create ndxbn/bun`.
 ## Getting Start
 
 ```bash
-# start middlewares
-docker compose up -d
-# install modules
+# clone this repository
+git clone XXX
+cd XXX
+# install dependencies
 bun install
-# prepare development environment
+# setup development environment, initialize application
 bun dev
-# run main script
+# run middleware
+docker compose up -d # or `podman compose up -d`
+# run CLI application
+bun cli -h
+#   or start server
 bun start
 ```
 
