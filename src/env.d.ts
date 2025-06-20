@@ -4,4 +4,3 @@ declare module "bun" {
 		S3_ENDPOINT: string;
 	}
 }
-
