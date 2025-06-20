@@ -22,7 +22,7 @@ await Promise.all([
 	$`git config commit.template .gitmessage.txt`,
 	(async () => {
 		// ensure ".env" file
-		if (!Bun.file(".env").exists()) {
+		if (!(await Bun.file(".env").exists())) {
 			await Bun.write(".env", Bun.file(".env.example"));
 		}
 	})(),
