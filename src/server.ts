@@ -1,5 +1,5 @@
-import { RedisClient, S3Client } from "bun";
 import type { Serve } from "bun";
+import { RedisClient, S3Client } from "bun";
 
 // Clients
 const redis = new RedisClient();

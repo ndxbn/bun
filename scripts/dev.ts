@@ -1,5 +1,4 @@
-import { parseArgs } from "node:util";
-import { styleText } from "node:util";
+import { parseArgs, styleText } from "node:util";
 import { $, type ShellError } from "bun";
 
 if (process.env.NODE_ENV !== "development") {
