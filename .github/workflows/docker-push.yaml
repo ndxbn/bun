@@ -22,14 +22,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       - name: Log in to the Container registry
-        uses: docker/login-action@3d100841f68d4548bf57e52eb27bd33ec5069f55
+        uses: docker/login-action@ef38ec311a7df3f01475313e7c5bb584b74b112a
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Extract metadata (tags, labels) for Docker
         id: meta
-        uses: docker/metadata-action@be19121bfd18b9c1ac415d9571d4f67b9b357886
+        uses: docker/metadata-action@c1e51972afc2121e065aed6d45c65596fe445f3f
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
       - name: Build and push Docker image
