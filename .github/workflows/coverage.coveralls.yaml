@@ -34,7 +34,7 @@ jobs:
 
     services:
       redis:
-        image: redis@sha256:a1e0a3b3a6cedd74d8ba44805b2497b93851a296f08a44962fedc03f1c490b47
+        image: redis@sha256:9443f786283dc9f00c5fd539673c01b799e29279f46c34277a62ec231da144a2
         ports:
           - 6379:6379
         options: >-
