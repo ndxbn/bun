@@ -8,12 +8,12 @@
 	"exports": "./index.js",
 	"bin": "cli.js",
 	"devDependencies": {
-		"@biomejs/biome": "2.2.2",
+		"@biomejs/biome": "2.2.3",
 		"@npm/types": "2.1.0",
 		"@tsconfig/bun": "1.0.8",
 		"@tsconfig/strictest": "2.0.5",
 		"@types/bun": "1.2.21",
-		"lefthook": "1.12.3",
+		"lefthook": "1.12.4",
 		"textlint": "15.2.2",
 		"textlint-rule-preset-ja-technical-writing": "12.0.2"
 	},
