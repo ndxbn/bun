@@ -13,7 +13,7 @@
 		"@tsconfig/bun": "1.0.8",
 		"@tsconfig/strictest": "2.0.6",
 		"@types/bun": "1.2.23",
-		"lefthook": "1.13.5",
+		"lefthook": "1.13.6",
 		"textlint": "15.2.2",
 		"textlint-rule-preset-ja-technical-writing": "12.0.2"
 	},
