@@ -10,7 +10,7 @@
 	"devDependencies": {
 		"@biomejs/biome": "2.2.5",
 		"@npm/types": "2.1.0",
-		"@tsconfig/bun": "1.0.8",
+		"@tsconfig/bun": "1.0.9",
 		"@tsconfig/strictest": "2.0.6",
 		"@types/bun": "1.2.23",
 		"lefthook": "1.13.6",
