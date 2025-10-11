@@ -2,7 +2,7 @@
 
 services:
   redis:
-    image: redis:alpine@sha256:987c376c727652f99625c7d205a1cba3cb2c53b92b0b62aade2bd48ee1593232
+    image: redis:alpine@sha256:59b6e694653476de2c992937ebe1c64182af4728e54bb49e9b7a6c26614d8933
     ports:
       - "6379:6379"
     volumes:
@@ -10,7 +10,7 @@ services:
     restart: unless-stopped
 
   postgres:
-    image: postgres:alpine@sha256:70b32afe0c274b4d93098fd724fcdaab3aba47270a4f1e63cbf9cc69d7bf1be4
+    image: postgres:alpine@sha256:f898ac406e1a9e05115cc2efcb3c3abb3a92a4c0263f3b6f6aaae354cbb1953a
     ports:
       - "5432:5432"
     environment:
