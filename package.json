@@ -9,6 +9,7 @@
 	"bin": "cli.js",
 	"devDependencies": {
 		"@biomejs/biome": "2.3.8",
+		"@bun-security-scanner/osv": "1.0.0",
 		"@npm/types": "2.1.0",
 		"@tsconfig/bun": "1.0.10",
 		"@tsconfig/strictest": "2.0.8",
