@@ -1,8 +1,11 @@
-
+[install]
+minimumReleaseAge = 259200
+[install.security]
+scanner = "@bun-security-scanner/osv"
 [test]
 coverage = true
 coverageIgnoreSourcemaps = true
 coverageReporter  = ["text", "lcov"]
-coverageDir = ".coverage"
+coverageDir = "coverage"
 iconcurrentTestGlob = "**/*.spec.ts"
 
