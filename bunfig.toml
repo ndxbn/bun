@@ -2,4 +2,6 @@
 coverage = true
 coverageIgnoreSourcemaps = true
 coverageReporter  = ["text", "lcov"]
-coverageDir = "coverage"
+coverageDir = ".coverage"
+iconcurrentTestGlob = "**/*.spec.ts"
+
