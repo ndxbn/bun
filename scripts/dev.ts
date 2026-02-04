@@ -33,7 +33,10 @@ await Promise.all([
  * 1: The repository may only contain the "Initial commit".
  *     This usually happens when you create a repo using the "Initialize this repository with:" option.
  */
-const countCommits = Number.parseInt(await $`git log --oneline | wc -l`.text());
+const countCommits = Number.parseInt(
+	await $`git log --oneline | wc -l`.text(),
+	10,
+);
 if (countCommits <= 1) {
 	// pick GitHub Actions to CI
 	if (values.coveralls ?? false) {
