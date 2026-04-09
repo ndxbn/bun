@@ -19,8 +19,6 @@ jobs:
         uses: biomejs/setup-biome@454fa0d884737805f48d7dc236c1761a0ac3cc13 # v2
       # lint
       - run: bun install
-      - run: bun lint:docs:ja
-        # bun lint may be biome, so you may not need to run.
       - run: biome ci --reporter=github .
   dockerlint:
     runs-on: ubuntu-latest

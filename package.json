@@ -8,25 +8,22 @@
 	"exports": "./index.js",
 	"bin": "cli.js",
 	"devDependencies": {
-		"@biomejs/biome": "2.4.4",
+		"@biomejs/biome": "2.4.10",
 		"@bun-security-scanner/osv": "1.0.0",
 		"@npm/types": "2.1.0",
 		"@tsconfig/bun": "1.0.10",
 		"@tsconfig/strictest": "2.0.8",
-		"@types/bun": "1.3.9",
-		"lefthook": "2.1.1",
-		"textlint": "15.5.2",
-		"textlint-rule-preset-ja-technical-writing": "12.0.2"
+		"@types/bun": "1.3.11",
+		"lefthook": "2.1.5"
 	},
 	"peerDependencies": {
-		"typescript": "5.9.3"
+		"typescript": "6.0.2"
 	},
 	"scripts": {
 		"dev": "bun scripts/dev.ts",
 		"start": "bun src/server.ts",
 		"cli": "bun src/cli.ts",
 		"lint": "biome check",
-		"lint:docs:ja": "textlint docs/ja/",
 		"fmt": "biome check --write --unsafe",
 		"prepack": "bun build src/index.ts src/cli.ts --outdir . --sourcemap --minify"
 	},
