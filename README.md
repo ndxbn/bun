@@ -18,24 +18,18 @@ This project is created by `bun create ndxbn/bun`.
 
 ## Requirements
 
-- [Bun](https://bun.sh/)
-- [Docker](https://docker.com/) or [podman](https://podman.io/)
+- [Bun](https://bun.sh/): Typescript Runtime
+- [Docker](https://docker.com/) or [podman](https://podman.io/): Middleware Container Runtime
 
 ## Getting Start
 
 ```bash
-# clone this repository
-git clone XXX
-cd XXX
-# install dependencies
+git clone XXX && cd XXX
 bun install
-# setup development environment, initialize application
-bun dev
-# run middleware
 docker compose up -d # or `podman compose up -d`
-# run CLI application
+bun cli init:app
+
 bun cli -h
-#   or start server
 bun start
 ```
 
@@ -45,7 +39,3 @@ bun start
 bun test
 ```
 
-## What to use Docker
-
-- startup Middlewares
-- [lint GitHub Action](./.github/lint.compose.yaml): do `cd .github` before run it
