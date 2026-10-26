@@ -2,13 +2,13 @@ name: Security Scanners
 
 on:
   push:
-    branches: 
+    branches:
       - main
   pull_request:
-    branches: 
+    branches:
       - main
   merge_group:
-    branches: 
+    branches:
       - main
   schedule:
     - cron: "0 12 * * 1,3,5"

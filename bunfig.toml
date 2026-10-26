@@ -1,11 +1,14 @@
 [install]
-minimumReleaseAge = 259200
+minimumReleaseAge = "3d"
 [install.security]
 scanner = "@bun-security-scanner/osv"
 [test]
 coverage = true
 coverageIgnoreSourcemaps = true
-coverageReporter  = ["text", "lcov"]
+coverageReporter = ["text", "lcov"]
 coverageDir = "coverage"
-iconcurrentTestGlob = "**/*.spec.ts"
+concurrentTestGlob = "**/*.spec.ts"
 
+[fmt]
+# printWidth = 100
+# semi = false
