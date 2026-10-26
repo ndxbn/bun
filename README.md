@@ -2,7 +2,9 @@
 README は `bun create ndxbn/bun` で生成されたプロジェクトに新しくジョインしてきた開発者のために書きます。
 `bun create ndxbn/bun` 自体の開発者のためのものではありません。
 -->
+
 #
+
 [![Bun](https://img.shields.io/badge/Bun-000000?logo=bun&logoColor=white&labelColor=grey)](https://bun.sh/)
 [![Formatted and Linted with Biome](https://img.shields.io/badge/Biome-60a5fa?logo=biome&labelColor=grey)](https://biomejs.dev/)
 [![Lefthook](https://img.shields.io/badge/Lefthook-ff1e1e?logo=Lefthook&logoColor=ff1e1e&labelColor=grey)](https://lefthook.dev/)
