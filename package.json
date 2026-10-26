@@ -8,23 +8,20 @@
 	"exports": "./index.js",
 	"bin": "cli.js",
 	"devDependencies": {
-		"@biomejs/biome": "2.4.10",
 		"@bun-security-scanner/osv": "1.0.0",
 		"@npm/types": "2.1.0",
-		"@tsconfig/bun": "1.0.10",
+		"@tsconfig/bun": "1.0.11",
 		"@tsconfig/strictest": "2.0.8",
-		"@types/bun": "1.3.11",
-		"lefthook": "2.1.5"
+		"@types/bun": "1.4.3",
+		"lefthook": "2.2.2"
 	},
 	"peerDependencies": {
-		"typescript": "6.0.2"
+		"typescript": "7.0.2"
 	},
 	"scripts": {
 		"dev": "bun scripts/dev.ts",
 		"start": "bun src/server.ts",
 		"cli": "bun src/cli.ts",
-		"lint": "biome check",
-		"fmt": "biome check --write --unsafe",
 		"prepack": "bun build src/index.ts src/cli.ts --outdir . --sourcemap --minify"
 	},
 	"files": []
